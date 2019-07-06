@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+nav {
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: $page-width;
+        padding: 0;
+        margin: 10px auto;
+        list-style-type: none;
+        a {
+            text-decoration: none;
+            color: $main-color;
+            transition: .5s all;
+            font-size: 1.2rem;
+            &:hover {
+                color: $secondary-color;
+            }
+            li {
+
+            }
+        }
+    }
+}
