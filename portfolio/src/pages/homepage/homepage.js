@@ -3,6 +3,7 @@ import Menu from '../../components/menu/menu';
 import './homepage.scss';
 import przemek from './przemek.png';
 import About from '../../components/about/about';
+import Abilities from '../../components/abilities/abilities';
 
 const Homepage = () => {
     return ( 
@@ -25,6 +26,7 @@ const Homepage = () => {
                 </div>
                 <div className="rest">
                     <About />
+                    <Abilities />
                 </div>
 
             </div>
