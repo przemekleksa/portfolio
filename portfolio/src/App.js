@@ -4,7 +4,7 @@ import Homepage from './pages/homepage/homepage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="app">
       <Homepage />
       
     </div>

@@ -1,33 +1,58 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './menu.scss';
 
 
-const Menu = () => {
-    return ( 
-        <nav>
+
+class Menu extends Component {
+    state = {
+        scrolled: false,
+    }
+
+    componentDidMount() {
+        // this.updateDimensions();
+         window.addEventListener('scroll', () =>{
+             const isTop = window.scrollY < 100
+            if (!isTop) {
+                this.setState({
+                    scrolled: true,
+                    })
+            } else {
+                this.setState({
+                    scrolled: false,
+                })
+            }
+         })
+     }
+
+     componentWillUnmount() {
+         window.removeEventListener('scroll');
+     }
+    render() {
+        return ( 
+        <nav className={this.state.scrolled ? 'scrolled' : ''}>
             <div className="burger"></div>
-            <ul>
-                <a href="#">
+            <ul className={this.state.scrolled ? 'menu scrolled' : 'menu'}>
+                <a href="#home">
                 <li>
                     Home
                 </li>
                 </a>
-                <a href="#">
+                <a href="#about">
                 <li>
                     About
                 </li>
                 </a>
-                <a href="#">
+                <a href="#stack">
                 <li>
                     Stack
                 </li>
                 </a>
-                <a href="#">
+                <a href="#portfolio">
                 <li>
                     Portfolio
                 </li>
                 </a>
-                <a href="#">
+                <a href="#contact">
                 <li>
                     Contact
                 </li>
@@ -35,6 +60,8 @@ const Menu = () => {
             </ul>
         </nav>
      );
+    }
+    
 }
  
 export default Menu;

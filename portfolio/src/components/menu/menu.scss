@@ -1,18 +1,42 @@
 @import '../../styles/variables';
 
 nav {
-    ul {
+    width: 100%;
+    &.scrolled {
+        position: fixed;
+        top: 0;
+        background-color: $secondary-color;
+    }
+    .menu {
         display: flex;
+        width: 100%;
         justify-content: space-evenly;
         width: $page-width;
-        padding: 0;
-        margin: 10px auto;
+        padding: 10px 0 12px 0;
+        margin: 0 auto;
         list-style-type: none;
+        transition: .5s all;
+        // z-index: 100;
+        &.scrolled {
+            a {
+                color: $main-font-color;
+                transition: 1.5s all;
+                &:hover {
+                    color: $main-font-color;
+                }
+                li {
+                    border-top: 2px solid $secondary-color;
+                    &:hover {
+                        border-top: 2px solid $main-font-color;
+                    }
+                }
+            }
+        }
         a {
-            text-decoration: none;
-            color: $main-color;
-            transition: .5s all;
-            font-size: 1.2rem;
+        text-decoration: none;
+        color: $main-color;
+        transition: .5s all;
+        font-size: 1.2rem;
             &:hover {
                 color: $secondary-color;
             }
@@ -20,5 +44,7 @@ nav {
 
             }
         }
+
+
     }
 }

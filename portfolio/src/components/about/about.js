@@ -4,7 +4,7 @@ import przemekleksa from './przemekleksa.jpeg';
 
 const About = () => {
     return ( 
-        <div className="about">
+        <div className="about" id="about">
             <div className="title">
                 <h2>About me</h2>
                 <p>Get to know me</p>

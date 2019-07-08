@@ -17,6 +17,9 @@
             }
             p {
                 margin: 0;
+                span {
+                    font-weight: 600;
+                }
             }
         }
         .stats {
@@ -47,7 +50,7 @@
                         width: 70%;
                     }
                     #fourth-level {
-                        width: 35%;
+                        width: 50%;
                     }
                     #fifth-level {
                         width: 30%;
@@ -69,7 +72,7 @@
                         width: 30%;
                     }
                     #fourth-fill {
-                        width: 65%;
+                        width: 50%;
                     }
                     #fifth-fill {
                         width: 70%;

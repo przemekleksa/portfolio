@@ -4,13 +4,17 @@ import './homepage.scss';
 import przemek from './przemek.png';
 import About from '../../components/about/about';
 import Abilities from '../../components/abilities/abilities';
+import Portfolio from '../../components/portfolio/portfolio';
+import ContactForm from '../../components/contact/contact';
+import Footer from '../../components/footer/footer';
+import ScrollButton from '../../components/scroll/scroll';
 
 const Homepage = () => {
     return ( 
         <div>
             <div className="container">
                 <Menu />
-                <div className="welcome">
+                <div className="welcome" id="home">
                     <div className="profile">
                         <div className="photo">
                             <img src={przemek} alt="Przemek Leksa photo" />
@@ -24,9 +28,15 @@ const Homepage = () => {
                         
                     </div>
                 </div>
+                <ScrollButton />
                 <div className="rest">
+                
                     <About />
                     <Abilities />
+                    <Portfolio />
+                    <ContactForm />
+                    <Footer />
+                    
                 </div>
 
             </div>

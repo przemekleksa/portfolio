@@ -3,12 +3,13 @@ import './abilities.scss';
 
 const Abilities = () => {
     return ( 
-        <div className="abilities">
+        <div className="abilities" id="stack">
             <div className="abilities-details">
                 <div className="details">
                     <h3>Some About my Abilities</h3>
                     <p>
-                    I have a lot of experiance using technologies like: <span>HTML, CSS, SCSS, Bootstrap, JavaScript</span>. I did finish IT studies with great scores and lately I decided to expand my knowledge so I joined <span>Fullstack Developer Bootcamp</span>. I've learned a lot of new amazing technologies there, but also expanded my knowledge in technologies that I used before. Some of those new technologies are: <span>React, Redux, Python, Django, SQL</span>.<br />
+                    I have a lot of experiance using technologies like: <span>HTML, CSS, SCSS, Bootstrap, JavaScript</span>. <br />
+                    I finished IT studies with great scores and lately I decided to expand my knowledge so I joined <span>Fullstack Developer Bootcamp</span>. I've learned a lot of new amazing technologies there, but also expanded my knowledge in technologies that I used before. Some of those new technologies are: <span>React, Redux, Python, Django, SQL</span>.<br />
                     In the past I've been using: PHP, Wordpress, Prestashop.<br /><br />
                     I can create fully RWD pages.
                     Coding a website based on Photoshop layout is not a hastle for me.<br />
