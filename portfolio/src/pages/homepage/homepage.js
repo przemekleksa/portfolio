@@ -11,13 +11,12 @@ import ScrollButton from '../../components/scroll/scroll';
 
 const Homepage = () => {
     return ( 
-        <div>
             <div className="container">
                 <Menu />
                 <div className="welcome" id="home">
                     <div className="profile">
                         <div className="photo">
-                            <img src={przemek} alt="Przemek Leksa photo" />
+                            <img src={przemek} alt="Przemek Leksa" />
                         </div>
                         <div className="typewriter">
                             <h1>
@@ -29,7 +28,7 @@ const Homepage = () => {
                     </div>
                 </div>
                 <ScrollButton />
-                <div className="rest">
+                {/* <div className="rest"> */}
                 
                     <About />
                     <Abilities />
@@ -37,10 +36,10 @@ const Homepage = () => {
                     <ContactForm />
                     <Footer />
                     
-                </div>
+                {/* </div> */}
 
             </div>
-        </div>
+        
      );
 }
  

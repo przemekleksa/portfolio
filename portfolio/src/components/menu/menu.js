@@ -6,10 +6,12 @@ import './menu.scss';
 class Menu extends Component {
     state = {
         scrolled: false,
+        burger: false,
+        mobileMenuOpen: false,
     }
 
     componentDidMount() {
-        // this.updateDimensions();
+        this.updateDimensions();
          window.addEventListener('scroll', () =>{
              const isTop = window.scrollY < 100
             if (!isTop) {
@@ -27,32 +29,63 @@ class Menu extends Component {
      componentWillUnmount() {
          window.removeEventListener('scroll');
      }
+
+     updateDimensions() {
+        console.log(window.innerWidth);
+         if(window.innerWidth < 1200) {
+           this.setState({
+               burger: true
+           })
+           } else {
+               this.setState({
+                   burger: false
+               })
+           }
+         }
+        
+    toggleMenu = () => {
+    if (this.state.mobileMenuOpen === false) {
+        this.setState({
+            mobileMenuOpen: true,
+        })
+    } else {
+            this.setState({
+                mobileMenuOpen: false,
+            })
+        }
+    }
+
     render() {
         return ( 
-        <nav className={this.state.scrolled ? 'scrolled' : ''}>
-            <div className="burger"></div>
-            <ul className={this.state.scrolled ? 'menu scrolled' : 'menu'}>
-                <a href="#home">
+        <nav className={this.state.scrolled && !this.state.burger ? 'scrolled' : this.state.mobileMenuOpen ? 'transparent' : '' }>
+                    <div className={this.state.burger && !this.state.mobileMenuOpen? 'burger' : this.state.mobileMenuOpen ? 'burger background': 'no-show'} onClick={this.toggleMenu}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+            {/* <ul className={this.state.scrolled ? 'menu scrolled' : 'menu'}> */}
+            <ul className={this.state.scrolled && !this.state.burger ? 'menu scrolled' : !this.state.burger ? 'menu' : this.state.mobileMenuOpen ? 'menu mobile': 'no-show'}>
+                <a href="#home" onClick={this.toggleMenu}>
                 <li>
                     Home
                 </li>
                 </a>
-                <a href="#about">
+                <a href="#about" onClick={this.toggleMenu}>
                 <li>
                     About
                 </li>
                 </a>
-                <a href="#stack">
+                <a href="#stack" onClick={this.toggleMenu}>
                 <li>
                     Stack
                 </li>
                 </a>
-                <a href="#portfolio">
+                <a href="#portfolio" onClick={this.toggleMenu}>
                 <li>
                     Portfolio
                 </li>
                 </a>
-                <a href="#contact">
+                <a href="#contact" onClick={this.toggleMenu}>
                 <li>
                     Contact
                 </li>

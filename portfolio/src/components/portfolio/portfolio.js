@@ -29,8 +29,8 @@ const Portfolio = () => {
                                 </ul>
                             </div>
                             <div className="buttons">
-                            <a href="#"><button>Live</button></a>
-                            <a href="#"><button>Github</button></a>
+                            <a href="#home"><button>Live</button></a>
+                            <a href="#home"><button>Github</button></a>
                             </div>
                         </div>
                     </div>
@@ -52,8 +52,8 @@ const Portfolio = () => {
                                 </ul>
                             </div>
                             <div className="buttons">
-                            <a href="#"><button>Live</button></a>
-                            <a href="#"><button>Github</button></a>
+                            <a href="#home"><button>Live</button></a>
+                            <a href="#home"><button>Github</button></a>
                             </div>
                         </div>
                     </div>
@@ -69,8 +69,8 @@ const Portfolio = () => {
                                 </ul>
                             </div>
                             <div className="buttons">
-                            <a href="#"><button>Live</button></a>
-                            <a href="#"><button>Github</button></a>
+                            <a href="#home"><button>Live</button></a>
+                            <a href="#home"><button>Github</button></a>
                             </div>
                         </div>
                     </div>
@@ -89,8 +89,8 @@ const Portfolio = () => {
                                 </ul>
                             </div>
                             <div className="buttons">
-                            <a href="#"><button>Live</button></a>
-                            <a href="#"><button>Github</button></a>
+                            <a href="#home"><button>Live</button></a>
+                            <a href="#home"><button>Github</button></a>
                             </div>
                         </div>
                     </div>

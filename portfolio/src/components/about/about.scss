@@ -1,7 +1,93 @@
 @import '../../styles/variables';
 
+@mixin tablet {
+    @media screen and (max-width: $page-width) { 
+        padding: 50px 20px; 
+            // width: 100%;
+        .personal-details{
+            // flex-direction: column;
+            .photo {
+                // width: 290px;
+                width: 30%;
+            }
+            .details {
+                width: 70%;
+                margin-left: 20px;
+                .some-stats {
+                    .download-button {
+                        
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $second-break-point) {
+        .personal-details {
+            flex-direction: column;
+            .photo {
+                display:block;
+                width: 70%;
+                margin: 0 auto;
+            }
+            .details {
+                width: 100%;
+                margin: 0;
+                h3 {
+                    display: block;
+                    text-align: center;
+                    padding-top: 10px;
+                    font-size: 1.8rem;
+                }
+                .some-stats {
+                    .download-button {
+                       float: right; 
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $second-break-point) {
+        .personal-details {
+            .details {
+                .some-stats {
+                    .row {
+                        flex-wrap: wrap;
+                        padding: 0;
+                        div {
+                            &:nth-child(1){
+                                width: 50%;
+                                padding: 5px;
+                                background-color: $secondary-color;
+                            }
+                            &:nth-child(2){
+                                width: 50%;
+                                padding: 5px;
+                                background-color: $secondary-color;
+                            }
+                            &:nth-child(3){
+                                width: 50%;
+                                padding: 5px;
+                            }
+                            &:nth-child(4){
+                                width: 50%;
+                                padding: 5px;
+                            }
+                       }
+                    }
+                    .download-button {
+                        width: 100%;
+                        .button {
+    
+                        }
+                     }
+                }
+            }
+        }
+    }
+}
+
 .about {
-    width: $page-width;
+    max-width: $page-width;
     margin: 0 auto;
     padding: 50px 0;
     .title {
@@ -21,24 +107,27 @@
        display: flex;
        padding: 50px 0;
        .photo {
-           width: 100%;
+           width: 40%;
            img {
                max-width: 100%;
                max-height: 100%;
            }
        }
        .details {
+           width: 50%;
            margin-left: 50px;
            h3 {
                margin: 0;
                font-size: 1.5rem;
                span {
                    color: $secondary-color;
+                   text-shadow: 1px 1px 1px #000000;
                }
            }
            p {
                 span {
-                    color: $secondary-color;
+                    // color: $secondary-color;
+                    // text-shadow: 0px 0px 1px #000000;
                 }
            }
            .some-stats {
@@ -68,20 +157,25 @@
                         }
                    }
                }
-               button {
-                   border: 0px;
-                   background-color: $secondary-color;
-                   border-radius: 5px;
-                   margin: 35px 0 0 0;
-                   padding: 25px 75px;
-                   a {
-                       color: #000;
-                       text-decoration: none;
-                       font-weight: 700;
-                       font-size: 1.5rem;
-                   }
+               .download-button {
+                    color: $main-font-color;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    button {
+                        border: 0px;
+                        background-color: $secondary-color;
+                        border-radius: 5px;
+                        margin: 26px 0 0 0;
+                        // padding: 25px 75px;
+                        padding: 25px 0;
+                        width: 100%;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
                }
+               
            }
        }
    }
+   @include tablet;
 }

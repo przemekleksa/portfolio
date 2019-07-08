@@ -2,12 +2,56 @@
 
 nav {
     width: 100%;
+    position: absolute;
+    z-index: 1;
+    // display:flex;
+    // transition: 2s all;
     &.scrolled {
         position: fixed;
         top: 0;
         background-color: $secondary-color;
     }
+    &.transparent {
+        position: fixed;
+        top: 0;
+        height: 40px;
+        background-color: $semi-transparent;
+    }
+    .burger {
+        display: block;
+        width: 40px;
+        height: 30px;
+        position: fixed;
+        top: 8px;
+        left: 6px;
+        cursor: pointer;
+        background-color: $transparent;
+        // display: none;
+        // height: 40px;
+        // border: 1px solid red;
+    //  margin: 10px;
+        span {
+            display: block;
+            top: 0px;
+            height: 5px;
+            // border:0px solid red ;
+            border-radius:4px;
+            width: 40px;
+            background-color: $secondary-color;
+            position: absolute;
+            &:nth-child(2){
+                top: 12px;
+            }
+            &:nth-child(3){
+                top:24px;
+            }
+        }
+    }
+    .no-show{
+        display:none;
+    }
     .menu {
+        // position: relative;
         display: flex;
         width: 100%;
         justify-content: space-evenly;
@@ -16,11 +60,24 @@ nav {
         margin: 0 auto;
         list-style-type: none;
         transition: .5s all;
-        // z-index: 100;
+        &.mobile {
+            display: block;
+            position: fixed;
+            top: 40px;
+            padding-left: 6px;
+            background-color: $semi-transparent;
+            
+            a {
+                li {
+                    margin: 10px 0;
+                }
+            }
+        }
         &.scrolled {
             a {
                 color: $main-font-color;
                 transition: 1.5s all;
+              
                 &:hover {
                     color: $main-font-color;
                 }
@@ -32,6 +89,7 @@ nav {
                 }
             }
         }
+        
         a {
         text-decoration: none;
         color: $main-color;

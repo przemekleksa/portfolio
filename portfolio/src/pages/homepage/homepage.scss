@@ -3,19 +3,16 @@
 
 .container {
     width: 100%;
+    position: inherit;
     .welcome {
         background: url('./drip.jpg');
         background-size: cover;
         background-repeat: none;
-        // background-position: center center;
-        position: absolute;
-        top:0;
         z-index: -1;
-        width: 100%;
         width: 100%;
         height: 100vh;
         .profile {
-            margin: 100px;
+            padding: 100px;
             .photo {
                 width: 30%;
                 margin: 0 auto;
@@ -76,5 +73,5 @@
     position: relative;
     width: 100%;
     top: 100vh;
-    z-index: -1;
+    
 }

@@ -15,7 +15,7 @@ const About = () => {
                 </div>
                 <div className="details">
                     <h3>I'm Przemysław Leksa and <span>Frontend Developer</span></h3>
-                    <p>Hi! My name is <span>Przemysław Leksa</span>. I am a freelance Frontend Developer, and I'm very passionate and dedicated to my work. I'm currently looking for possibilities to start a full time Frontend Developer job.</p>
+                    <p>Hi! My name is <span>Przemysław Leksa</span>. I'm a freelance Frontend Developer, and I'm very passionate and dedicated to my work. I'm currently looking for possibilities to start a full time Frontend Developer job.</p>
                     <div className="some-stats">
                         <div className="row">
                             <div>
@@ -87,11 +87,13 @@ const About = () => {
                                 English C2
                             </div>
                         </div>
+                        <a href="./Przemyslaw_Leksa_resume.pdf" download className="download-button">
                         <button>
-                            <a href="#">
+                            
                             Download CV
-                            </a>
+                            
                         </button>
+                        </a>
                     </div>
                 </div>
            </div>
