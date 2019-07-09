@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Menu from '../../components/menu/menu';
 import './homepage.scss';
 import przemek from './przemek.png';
@@ -9,8 +9,13 @@ import ContactForm from '../../components/contact/contact';
 import Footer from '../../components/footer/footer';
 import ScrollButton from '../../components/scroll/scroll';
 
-const Homepage = () => {
-    return ( 
+class Homepage extends Component {
+    state = {
+
+    }
+    
+    render() {
+        return ( 
             <div className="container">
                 <Menu />
                 <div className="welcome" id="home">
@@ -41,6 +46,8 @@ const Homepage = () => {
             </div>
         
      );
+    }
+    
 }
  
 export default Homepage;

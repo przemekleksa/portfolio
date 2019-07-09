@@ -5,6 +5,9 @@ const Footer = () => {
     return ( 
         <div className="footer">
             &copy; Przemysław Leksa 2019
+            <br />
+            <br />
+            React + Scss
         </div>
      );
 }

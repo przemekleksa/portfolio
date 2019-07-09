@@ -15,6 +15,20 @@
             }   
         }
     }
+    @media screen and (max-width: $third-break-point) {
+        .contact-container {
+            .contact-details {
+                flex-direction: column;
+                .contact-info {
+                    width: 100%;
+                }
+                .contact-form {
+                    margin-top: 50px;
+                    width: 100%;
+                }
+            }   
+        }
+    }
 }
 
 .contact {

@@ -14,7 +14,7 @@
         .profile {
             padding: 100px;
             .photo {
-                width: 30%;
+                width: 370px;
                 margin: 0 auto;
                 img {
                     max-width: 100%;
@@ -28,7 +28,7 @@
                 }
             }
             .typewriter {
-                width: 30%;
+                width: 100%;
                 padding: 40px 0 0 0;
                 margin: 0 auto;
                 text-transform: uppercase;
@@ -46,9 +46,15 @@
                     border-right: .15em solid orange; /* The typywriter cursor */
                     white-space: nowrap; /* Keeps the content on a single line */
                     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                    position: absolute;
+                    // top: 50%;
+                    max-width: 350px;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translateX(-50%); 
                     letter-spacing: .15em; /* Adjust as needed */
                     animation: 
-                      typing 3.5s steps(40, end),
+                      typing 3.5s steps(40, start),
                       blink-caret .75s step-end infinite;
                     
                 }
@@ -69,9 +75,9 @@
     50% { border-color: $secondary-color; }
   }
 
-.rest {
-    position: relative;
-    width: 100%;
-    top: 100vh;
+// .rest {
+//     position: relative;
+//     width: 100%;
+//     top: 100vh;
     
-}
+// }

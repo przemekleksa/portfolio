@@ -57,8 +57,8 @@ class Menu extends Component {
 
     render() {
         return ( 
-        <nav className={this.state.scrolled && !this.state.burger ? 'scrolled' : this.state.mobileMenuOpen ? 'transparent' : '' }>
-                    <div className={this.state.burger && !this.state.mobileMenuOpen? 'burger' : this.state.mobileMenuOpen ? 'burger background': 'no-show'} onClick={this.toggleMenu}>
+        <nav className={this.state.scrolled && !this.state.burger ? 'scrolled' : this.state.mobileMenuOpen && this.state.burger ? 'transparent' : '' }>
+                    <div className={this.state.burger && !this.state.mobileMenuOpen? 'burger' : this.state.mobileMenuOpen && this.state.burger ? 'burger background': 'no-show'} onClick={this.toggleMenu}>
                         <span></span>
                         <span></span>
                         <span></span>

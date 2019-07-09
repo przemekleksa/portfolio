@@ -66,7 +66,7 @@ const ContactForm = () =>
                     {/* <label htmlFor="message">Message</label> */}
                     <textarea name="message" rows="3" placeholder="Message"></textarea>
 
-                    <input type="submit" value="Send Message"/>
+                    <input type="submit" value="Send Message" disabled/>
                 </form>
             </div>
         </div>

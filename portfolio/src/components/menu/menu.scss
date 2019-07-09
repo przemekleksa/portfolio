@@ -1,5 +1,23 @@
 @import '../../styles/variables';
 
+
+@mixin cross {
+    &:nth-child(1) {
+        top: -50px;
+        left: 0px;  
+    }
+    &:nth-child(2) {
+        top: 8;
+        transform: rotate(45deg);
+        left: 0px;
+    }
+    &:nth-child(3) {
+        top: 12px;
+        left: 0px;
+        transform: rotate(-45deg);
+    }
+}
+
 nav {
     width: 100%;
     position: absolute;
@@ -13,7 +31,7 @@ nav {
     }
     &.transparent {
         position: fixed;
-        top: 0;
+        
         height: 40px;
         background-color: $semi-transparent;
     }
@@ -26,11 +44,13 @@ nav {
         left: 6px;
         cursor: pointer;
         background-color: $transparent;
+        
         // display: none;
         // height: 40px;
         // border: 1px solid red;
     //  margin: 10px;
         span {
+            transition: .5s all;
             display: block;
             top: 0px;
             height: 5px;
@@ -46,6 +66,11 @@ nav {
                 top:24px;
             }
         }
+        &.background {
+            span {
+                @include cross;
+            }
+        }
     }
     .no-show{
         display:none;
@@ -54,12 +79,12 @@ nav {
         // position: relative;
         display: flex;
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: space-around;
         width: $page-width;
         padding: 10px 0 12px 0;
         margin: 0 auto;
         list-style-type: none;
-        transition: .5s all;
+        // transition: 2s all;
         &.mobile {
             display: block;
             position: fixed;
